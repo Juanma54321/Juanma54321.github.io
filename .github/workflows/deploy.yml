@@ -23,7 +23,8 @@ jobs:
       - name: Instalar dependencias y compilar
         run: |
           npm install
-          npx run build
+          chmod +x node_moudles/.bin/vite
+          npm run build
 
       # 4. Configura las credenciales de AWS usando los secretos que guardaste en GitHub
       - name: Configurar credenciales de AWS
