@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Iluminador Crystal">
+  <defs>
+    <linearGradient id="bg7" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff5cf"/>
+      <stop offset="100%" stop-color="#ffe8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg7)"/>
+  <rect x="270" y="200" width="260" height="220" rx="24" fill="#f7ce6d"/>
+  <polygon points="400,230 420,280 474,280 430,312 446,366 400,334 354,366 370,312 326,280 380,280" fill="#fff3b1"/>
+  <text x="400" y="500" text-anchor="middle" font-size="44" font-family="Verdana, sans-serif" fill="#8d6a10">Iluminador</text>
+</svg>

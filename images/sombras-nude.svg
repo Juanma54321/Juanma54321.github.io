@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Sombras Nude Chic">
+  <defs>
+    <linearGradient id="bg14" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4eadf"/>
+      <stop offset="100%" stop-color="#e6d6c4"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg14)"/>
+  <rect x="240" y="200" width="320" height="220" rx="24" fill="#b9977a"/>
+  <rect x="270" y="240" width="70" height="50" rx="10" fill="#f2dcc8"/>
+  <rect x="350" y="240" width="70" height="50" rx="10" fill="#dfc1a7"/>
+  <rect x="430" y="240" width="70" height="50" rx="10" fill="#c59f82"/>
+  <rect x="270" y="305" width="70" height="50" rx="10" fill="#a98569"/>
+  <rect x="350" y="305" width="70" height="50" rx="10" fill="#8e6b52"/>
+  <rect x="430" y="305" width="70" height="50" rx="10" fill="#6f4f3a"/>
+  <text x="400" y="500" text-anchor="middle" font-size="44" font-family="Verdana, sans-serif" fill="#5f3f2e">Sombras Nude</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Polvo Seda Matte">
+  <defs>
+    <linearGradient id="bg11" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff3d8"/>
+      <stop offset="100%" stop-color="#ffe2a9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg11)"/>
+  <circle cx="400" cy="300" r="130" fill="#edc97a"/>
+  <circle cx="400" cy="300" r="90" fill="#f6ddb0"/>
+  <circle cx="400" cy="300" r="45" fill="#fff1d7"/>
+  <text x="400" y="500" text-anchor="middle" font-size="44" font-family="Verdana, sans-serif" fill="#8d6925">Polvo Seda</text>
+</svg>
