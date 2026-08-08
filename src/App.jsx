@@ -212,7 +212,7 @@ function App() {
             <a href="#" className="site-header__brand">Velvet Makeup</a>
           </div>
           <nav className="site-header__nav" aria-label="Navegacion principal">
-            <a href="#catalogo">Catalogo</a>
+            <a href="#catalogo">Catago</a>
           </nav>
         </div>
       </header>
