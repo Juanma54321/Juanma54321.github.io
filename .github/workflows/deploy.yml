@@ -1,0 +1,39 @@
+name: Desplegar Web Estática a S3
+
+on:
+  push:
+    branches: [ main ] # Se ejecutará automáticamente cada vez que hagas un git push a la rama main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # Utiliza un servidor virtual limpio con Linux
+
+    steps:
+      # 1. Descarga el código fuente de tu repositorio en el servidor virtual
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      # 2. Configura Node.js en el entorno (necesario si tu proyecto usa Vite, React, Astro, etc.)
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 3. Instala las dependencias del proyecto y compila la aplicación
+      - name: Instalar dependencias y compilar
+        run: |
+          npm install
+          npm run build
+
+      # 4. Configura las credenciales de AWS usando los secretos que guardaste en GitHub
+      - name: Configurar credenciales de AWS
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1 # <--- CAMBIA ESTO por la región de tu bucket (ej. us-west-2, sa-east-1)
+
+      # 5. Sube los archivos compilados al Bucket S3
+      - name: Sincronizar con S3
+        run: |
+          aws s3 sync dist/ s3://empresa-cosmeticos --delete
