@@ -209,7 +209,7 @@ function App() {
             <div className="site-header__icon-slot" aria-hidden="true">
               <img src={new URL('../images/Logotipo_VELVET.png', import.meta.url).href} alt="" />
             </div>
-            <a href="#" className="site-header__brand">Velvet Makeup</a>
+            <a href="#" className="site-header__brand">Velvet Makeup Online</a>
           </div>
           <nav className="site-header__nav" aria-label="Navegacion principal">
             <a href="#catalogo">Catalogo</a>
