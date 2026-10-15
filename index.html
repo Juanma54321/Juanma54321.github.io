@@ -7,10 +7,120 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
-
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<div id="root"></div>
-	<script type="module" src="/src/main.jsx"></script>
+	<header class="site-header">
+		<div class="site-header__inner">
+			<div class="site-header__brand-group">
+				<div class="site-header__icon-slot" aria-hidden="true">
+					<img src="images/Logotipo_VELVET.png" alt="" />
+				</div>
+				<a href="#" class="site-header__brand">Velvet Makeup</a>
+			</div>
+			<nav class="site-header__nav" aria-label="Navegacion principal">
+				<a href="#catalogo">Catalogo</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="page-content">
+		<section class="hero" aria-labelledby="page-title">
+			<div class="hero__overlay"></div>
+			<div class="hero__content">
+				<img class="hero__logo" src="images/Logotipo_VELVET.png" alt="Logotipo Velvet Makeup" />
+				<div class="hero__text">
+					<p class="hero__eyebrow">Belleza Velvet Makeup</p>
+					<h1 id="page-title">Velvet Makeup Boutique</h1>
+					<p>Explora la coleccion de maquillaje Velvet Makeup y crea tu look ideal.</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="catalogo" class="layout">
+			<section class="products-section">
+			<div class="section-title">
+				<h2>Productos Velvet Makeup</h2>
+				<span id="product-count">0 productos</span>
+			</div>
+			<div id="products-grid" class="products-grid"></div>
+			</section>
+
+			<aside class="cart-panel">
+			<h2>Bolsa Velvet Makeup</h2>
+			<ul id="cart-items" class="cart-items"></ul>
+
+			<div class="cart-summary">
+				<p>Subtotal</p>
+				<strong id="subtotal">$0.00</strong>
+			</div>
+
+			<button id="clear-cart" class="btn btn--secondary" type="button">Vaciar carrito</button>
+			<button id="checkout" class="btn btn--primary" type="button">Simular compra Velvet Makeup</button>
+			</aside>
+		</section>
+	</main>
+
+	<section id="checkout-modal" class="modal hidden" aria-hidden="true">
+		<div class="modal__card">
+			<h3>Simular compra Velvet Makeup</h3>
+			<p>Completa tus datos para finalizar tu compra en Velvet Makeup.</p>
+
+			<label for="customer-name">Nombre</label>
+			<input id="customer-name" type="text" placeholder="Tu nombre" />
+
+			<label for="customer-address">Direccion</label>
+			<input id="customer-address" type="text" placeholder="Tu direccion" />
+
+			<div class="modal__actions">
+				<button id="cancel-checkout" class="btn btn--secondary" type="button">Cancelar</button>
+				<button id="confirm-checkout" class="btn btn--primary" type="button">Confirmar compra</button>
+			</div>
+		</div>
+	</section>
+
+	<footer class="site-footer">
+		<div class="site-footer__inner">
+			<p>© 2026 Velvet Makeup. Todos los derechos reservados.</p>
+			<nav aria-label="Enlaces legales">
+				<a href="#" id="privacy-policy-link" aria-label="Politica de privacidad (simulada)">Politica de privacidad</a>
+				<a href="#" id="cookies-policy-link" aria-label="Politica de cookies (simulada)">Manejo de cookies</a>
+			</nav>
+		</div>
+	</footer>
+
+	<section id="legal-modal" class="modal hidden" aria-hidden="true">
+		<div class="modal__card modal__card--legal" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title">
+			<div class="modal__header">
+				<div>
+					<p class="modal__eyebrow">Informacion legal</p>
+					<h3 id="legal-modal-title">Politica de privacidad y cookies</h3>
+				</div>
+				<button id="close-legal-modal" class="modal__close" type="button" aria-label="Cerrar ventana legal">&times;</button>
+			</div>
+
+			<div class="legal-modal__sections">
+				<section id="privacy-policy-section" class="legal-section">
+					<h4>Politica de privacidad</h4>
+					<p>Recopilamos solo la informacion necesaria para procesar tu compra simulada, responder a tu solicitud y enviarte el resumen por WhatsApp.</p>
+					<p>Los datos que ingresas en el formulario no se almacenan en una base de datos local. Se usan unicamente para generar el mensaje de compra y completar la accion simulada.</p>
+				</section>
+
+				<section id="cookies-policy-section" class="legal-section">
+					<h4>Manejo de cookies</h4>
+					<p>Este sitio usa cookies tecnicas solo si el navegador o la plataforma lo requieren para funciones basicas como navegacion o rendimiento.</p>
+					<p>No usamos cookies de seguimiento, publicidad ni analitica personalizada en esta version del proyecto.</p>
+				</section>
+			</div>
+
+			<div class="modal__actions modal__actions--legal">
+				<button id="back-to-privacy" class="btn btn--secondary" type="button">Ver privacidad</button>
+				<button id="back-to-cookies" class="btn btn--secondary" type="button">Ver cookies</button>
+				<button id="confirm-close-legal" class="btn btn--primary" type="button">Cerrar</button>
+			</div>
+		</div>
+	</section>
+
+	<script src="script.js"></script>
 </body>
 </html>
